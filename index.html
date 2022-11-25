@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./icon.jpg" type="image/x-icon">
+    <title>Currency Rate</title>
+</head>
+
+<body>
+
+    <div class="d-flex main-container py-4 px-3 align-items-center">
+
+        <!-- container -->
+        <div class="container bg-light p-5">
+
+            <!-- title -->
+            <h2 class="text-danger text-center pb-5">Currency Exchange Rate API</h2>
+
+            <div class="row gx-4 gy-1">
+
+                <!-- sample or from value -->
+                <div class="col-md-5">
+                    <label for="sampleValue" class="form-label fw-bold">Sample Value</label>
+                    <input type="number" class="form-control" id="sampleValue" value="1" onchange=convertedValue()
+                        onkeyup=convertedValue()>
+                </div>
+
+                <!-- converted or to value -->
+                <div class="col-md-5">
+                    <label for="convertedValue" class="form-label fw-bold">Converted Value</label>
+                    <input type="number" class="form-control" id="convertedValue" onchange=sampleValue()
+                        onkeyup=sampleValue()>
+                </div>
+
+                <!-- conversion rate -->
+                <div class="col-md-2">
+                    <label for="conversionRate" class="form-label fw-bold">Conversion Rate</label>
+                    <input type="number" class="form-control" id="conversionRate" disabled>
+                </div>
+            </div>
+
+            <div class="row gx-5 gy-1">
+                <!-- from currency -->
+                <div class="col-md-6">
+                    <label for="convertFrom" class="form-label fw-bold">Convert From</label>
+                    <select id="convertFrom" class="form-select">
+                    </select>
+                </div>
+
+                <!-- to currency -->
+                <div class="col-md-6">
+                    <label for="convertTo" class="form-label fw-bold">Convert To</label>
+                    <select id="convertTo" class="form-select">
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
